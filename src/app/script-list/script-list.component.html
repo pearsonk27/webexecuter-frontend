@@ -1,0 +1,30 @@
+<div class="container">
+    <h1 class="my-4">Scheduled scripts</h1>
+    <table class="table">
+        <caption>Script task list</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Start Date</th>
+                <th>Cron Expression</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let script of scripts">
+                <td>{{ script.name }}</td>
+                <td>{{ script.location }}</td>
+                <td>{{ script.startDate }}</td>
+                <td>{{ script.cronExpression }}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="onDelete(script)">Delete</button>
+                </td>
+                <td>
+                    <button mat-raised-button (click)="executeScript(script)">Execute</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

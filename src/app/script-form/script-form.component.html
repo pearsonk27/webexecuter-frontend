@@ -1,0 +1,22 @@
+<div class="container">
+    <h1 class="my-4">Schedule a new script</h1>
+    <form [formGroup]="scriptForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name" required>
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" formControlName="location" required>
+        </div>
+        <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="text" class="form-control" id="startDate" formControlName="startDate" required>
+        </div>
+        <div class="form-group">
+            <label for="cronExpression">Cron Expression</label>
+            <input type="text" class="form-control" id="cronExpression" formControlName="cronExpression" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
